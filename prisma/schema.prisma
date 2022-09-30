@@ -65,7 +65,7 @@ model Channel {
   name     String
   admin    User      @relation(fields: [adminId], references: [id], "admin")
   adminId  String
-  user     User[]    @relation(fields: [userIds], references: [id])
+  users     User[]    @relation(fields: [userIds], references: [id])
   userIds  String[]  @db.ObjectId
   messages Message[]
   updatedAt     DateTime? @updatedAt
